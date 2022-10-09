@@ -1,10 +1,8 @@
 package Reqres.stepDefinitions;
 
 import Reqres.utilities.ExcelUtil;
-import Reqres.utilities.ReqresAPI;
 import Reqres.utilities.pojo.User;
 import Reqres.utilities.pojo.registeredUser;
-import com.github.javafaker.Faker;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
