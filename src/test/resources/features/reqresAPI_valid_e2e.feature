@@ -1,6 +1,7 @@
+
 Feature: Test REQRES REST-API
   Users should be able to submit GET, POST, PATCH, DELETE requests to a web service, represented by reqres.in
-
+  @valid_tests
   Scenario: GET USER LIST from database
     When I send GET request to endpoint with the following page number 1
     Then I get user list

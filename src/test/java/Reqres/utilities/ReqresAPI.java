@@ -134,7 +134,7 @@ public class ReqresAPI {
                 .and()
                 .contentType(ContentType.JSON)
                 .and()
-                .header("Authorization", token)
+                .header("Authorization", token!=null? token:"")
                 .body(generateUser(name, job))
                 .and().pathParam("id", id)
                 .when()
@@ -179,7 +179,7 @@ public class ReqresAPI {
 
     public static Response deleteUser(int id) {
         response = given()
-                .header("Authorization", token)
+                .header("Authorization", token!=null? token:"")
                 .and()
                 .pathParam("id", id)
                 .when()

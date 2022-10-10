@@ -95,6 +95,7 @@ public class reqresStepDefinitions {
 
         System.out.println("user created = " + user);
     }
+
     @When("I send POST request to endpoint with INVALID {string} and {string}")
     public void iSendPOSTRequestToEndpointWithINVALIDNameAndJob(String name, String job) {
         createUser("/api/users", name, job);
@@ -108,7 +109,6 @@ public class reqresStepDefinitions {
     }
 
     //---------------------- UPDATE USER WITH MULTIPLE DATA ---------------------------
-
     @When("I send POST request to endpoint with following name and job")
     public void i_send_POST_request_to_endpoint_with_following_and(DataTable table) {
         Map<String, String> userData = table.asMaps().get(0);
@@ -129,7 +129,6 @@ public class reqresStepDefinitions {
     }
 
     //---------------------- GET SINGLE USER DATA ---------------------------
-
     @And("I get user informations")
     public void iGetUserInformations() {
         User userUpdated = response.jsonPath().getObject("", User.class);

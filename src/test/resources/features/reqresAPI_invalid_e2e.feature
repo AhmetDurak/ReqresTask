@@ -32,7 +32,8 @@ Feature: Test REQRES REST-API with INVALID DATA
       |        |        |
     #body is also accepting empty input
 
-    #Because PUT accepts any empty or non-empty input, not possible to apply any invalid data
+  #Because PUT accepts any empty or non-empty input, not possible to apply any invalid data
+  #As Header Authorization accepts also any value regardless from retrieved token
   Scenario: UPDATE created user information
     When I send PUT request to endpoint with created user id
     Then status code should be 200
